@@ -73,6 +73,11 @@ cc -o solutions/use_switch solutions/use_switch.c
 ./solutions/use_if
 ./solutions/use_switch
 ```
+Aufgabe 1:
+   - https://github.com/Daemon1260/PP9/blob/master/use_for.c
+   - https://github.com/Daemon1260/PP9/blob/master/use_if.c
+   - https://github.com/Daemon1260/PP9/blob/master/use_switch.c
+
 
 ---
 
@@ -117,6 +122,38 @@ Reflection:
 
 * **Explain how each flowchart node maps to your C code.**
 
+2.1
+
+	
+ 1. int flowchart_algorithm(int x) {
+	   -Die Funktion beginnt mit dem Startpunkt des Algorithmus. Der Parameter x wird übergeben.
+	
+ 2. int result = 1;
+	   -Dies entspricht der Initialisierung im Flussdiagramm. Der Algorithmus startet mit einem festen Anfangswert.
+	
+ 3. for (int i = 1; i <= x; i++) {
+	   -Hier wird die wiederholende Verarbeitungsschleife über i implementiert. 
+	   Der Flussdiagrammknoten "i = 1 bis x" wird als for-Schleife realisiert.
+	
+ 4. if (i % 2 == 0)
+    	result += i;
+	   else
+    	result *= i;
+	   -Dieser Block überprüft, ob i durch 2 teilbar ist (also gerade). 
+	   Entsprechend wird entweder addiert oder multipliziert – genau wie im Flussdiagramm.
+	
+ 5. if (result > 1000)
+    	result -= 100;
+	   -Diese Bedingung entspricht dem Knoten, der prüft, ob das Ergebnis zu groß ist. Wenn ja, wird es reduziert.
+	
+ 6. printf("Zwischenergebnis nach Schritt %d: %d\n", i, result);
+	   -Das ist der "Ergebnis anzeigen"-Knoten im Diagramm. Nach jedem Schleifendurchlauf wird das aktuelle result    
+      ausgegeben.
+	
+ 7. return result;
+	   -Nach Abschluss aller Schleifendurchläufe wird das finale Ergebnis zurückgegeben. 
+	   Das entspricht dem „Ende“-Knoten des Flussdiagramms.
+
 ---
 
 ### Task 3: Code-to-Flowchart
@@ -152,6 +189,7 @@ Reflection:
            default: return false;
        }
    }
+   
    ```
 3. For each function, draw a **Mermaid** flowchart capturing loops, branches, and switch logic. Include your Mermaid code in a Markdown file under `solutions/`.
 
@@ -163,6 +201,9 @@ graph TD
   B --> C{Condition}
   ...
 ```
+zu Aufgabe 3:
+   -https://github.com/Daemon1260/PP9/blob/master/algorithm_one.md
+   -https://github.com/Daemon1260/PP9/blob/master/algorithm_two.md
 
 ---
 
